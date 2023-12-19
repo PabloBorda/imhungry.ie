@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:background="@color/beige">
+
+    <ImageView
+        android:id="@+id/prodicon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/view" />
+
+
+    
+
+    <TextView
+        android:id="@+id/prname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/prodicon"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textSize="20px" >
+
+    </TextView>
+    
+    <LinearLayout android:id="@+id/proddata"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:background="@color/rojolucio"
+                  android:orientation="vertical"	
+                  android:layout_alignParentRight="true"
+                  android:layout_below="@+id/prname"
+                  >
+    
+      <TextView
+          android:id="@+id/pri"
+          android:background="@color/rojolucio"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentTop="true"
+          android:layout_below="@+id/prname"
+          android:textColor="@color/white"
+          android:textSize="15px" >
+
+    </TextView>
+     
+    <TextView
+        android:id="@+id/amounttext"
+        android:background="@color/rojolucio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pri"        
+        android:layout_alignParentRight="true"
+        android:textColor="@color/white"
+        android:textSize="15px" >
+
+    </TextView>
+     
+     </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/producttable"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+
+  <TableRow
+        android:id="@+id/productinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+      
+    <ImageView
+	android:id="@+id/productpic"
+	android:layout_width="180dp"
+	android:layout_height="180dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="20dp" />
+      
+    <LinearLayout
+        android:id="@+id/productdata"
+        android:orientation="vertical"
+        android:layout_span="2">
+    
+      <TextView
+	  android:id="@+id/productname"
+	  android:layout_width="wrap_content"
+  	  android:layout_height="wrap_content"
+          android:textSize="25dp"
+	  android:text="TextView"/>
+
+      <TextView
+	android:id="@+id/widget44"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Seller: "
+	android:hint="Seller"/>
+      
+      <TextView
+	android:id="@+id/productseller"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="TextView"/>
+    
+     <ImageView
+	android:id="@+id/companylogo"
+        android:layout_width="50px"
+        android:layout_height="50px"/>
+
+     <TextView
+	android:id="@+id/price"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="TextView"
+        android:textSize="50dp"/>
+
+     <TextView
+	android:id="@+id/stock"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="TextView"/>
+         
+    </LinearLayout>
+      
+      
+      
+      
+      
+      
+  </TableRow>
+
+  <TableRow android:id="@+id/productrating">
+      <RatingBar
+	android:id="@+id/stars"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:numStars="5"
+        android:rating="3.5"
+        android:isIndicator="false"
+        style="@style/productRatingBar"/>
+
+      <ImageButton
+	android:id="@+id/orderbutton"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+        android:src="@+drawable/order"/>      
+  </TableRow>
+
+
+  <TableRow android:id="@+id/productdescription">
+      <TextView
+	android:id="@+id/description"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Description"
+        android:layout_span="2"/>
+      
+      
+  </TableRow>
+  
+  <TableRow android:id="@+id/productquestions">
+        <EditText
+	  android:id="@+id/answered"
+	  android:layout_width="fill_parent"
+	  android:layout_height="125dp"
+	  android:text="EditText"
+	  android:textSize="18sp"
+          android:lines="10"
+          android:layout_span="3"/>
+  </TableRow>
+
+
+  <TableRow android:id="@+id/asking">
+      <EditText
+	  android:id="@+id/question"
+	  android:layout_width="fill_parent"
+	  android:layout_height="wrap_content"
+	  android:text="EditText"
+	  android:textSize="18sp"
+          android:layout_span="2"
+          android:maxLines="1"/>
+      <Button
+          android:id="@+id/askbutton"
+          android:text="Ask!"
+          android:layout_span="1"/>
+  </TableRow>
+
+</TableLayout>

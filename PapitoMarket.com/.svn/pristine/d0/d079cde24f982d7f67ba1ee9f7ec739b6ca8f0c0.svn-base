@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">A La Carta</string>
+    <string name="updates">A La Carta Updates</string>
+    <string name="hello">Hello World, ContactListActivity!</string>
+    <string name="fbutton">Facebook Login</string>
+    <string name="applicationId">398054573586712</string>
+    <string name="nostores">No stores close, try searching using alternative search tags</string>
+    <string name="com_facebook_dialogloginactivity_ok_button">OK</string>
+    <string name="com_facebook_loginview_log_out_button">Log Out</string>
+    <string name="com_facebook_loginview_log_in_button">Log In</string>
+    <string name="com_facebook_loginview_logged_in_as">Logged in as: %1$s</string>
+    <string name="com_facebook_loginview_logged_in_using_facebook">Logged in using Facebook</string>
+    <string name="com_facebook_loginview_log_out_action">Log Out</string>
+    <string name="com_facebook_loginview_cancel_action">Cancel</string>
+    <string name="com_facebook_logo_content_description">Facebook Logo</string>
+    <string name="com_facebook_usersettingsfragment_log_in_button">Log In&#8230;</string>
+    <string name="com_facebook_usersettingsfragment_logged_in">Logged In</string>
+    <string name="com_facebook_usersettingsfragment_not_logged_in">Not Logged In</string>
+    <string name="com_facebook_placepicker_subtitle_format">%1$s • %2$,d were here</string>
+    <string name="com_facebook_placepicker_subtitle_catetory_only_format">%1$s</string>
+    <string name="com_facebook_placepicker_subtitle_were_here_only_format">%1$,d were here</string>
+    <string name="com_facebook_picker_done_button_text">Done</string>
+    <string name="com_facebook_choose_friends">Choose Friends</string>
+    <string name="com_facebook_nearby">Nearby</string>
+    
+    <string name="com_facebook_loading">Loading...</string>
+    <string name="com_facebook_internet_permission_error_title">AndroidManifest Error</string>
+    <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
+    <string name="com_facebook_requesterror_web_login">Your Facebook account is locked. Please log into www.facebook.com to continue.</string>
+    <string name="com_facebook_requesterror_relogin">Please log into this app again to reconnect your Facebook account.</string>
+    <string name="com_facebook_requesterror_password_changed">Your Facebook password has changed. Please log into this app again to reconnect your Facebook account.</string>
+    <string name="com_facebook_requesterror_reconnect">Please log into this app again to reconnect your Facebook account.</string>
+    <string name="com_facebook_requesterror_permissions">This app doesn’t have permission to do this. To change permissions, try logging into the app again.</string>
+    <string-array name="amount">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>More...</item>
+    </string-array>
+    <string name="description_edit_validation">30</string>
+    <string name="length10">10</string>
+    <string name="length20">20</string>
+    <string name="length30">30</string>
+    <string name="length40">40</string>
+    <string name="length50">50</string>
+    <string name="length60">60</string>
+    <string name="length70">70</string>
+    <string name="length80">80</string>
+    <string name="length90">90</string>
+    <string name="length100">100</string>
+      <string name="cartimage">Shopping Cart Image description</string>
+        <string name="menudes">Menu Description</string>
+    <string name="cameraRequestCode">1337</string>
+        <string name="companyname">CompanyName</string>
+    <string name="cart_button">Cart button</string>
+    <string name="mapimage_content_description">Map image</string>
+    <string name="add_to_cart_button_text">Add to cart</string>
+    <string name="logo_image_content_description">Company logo</string>
+    <string name="your_shopping_cart_list">Your Shopping Cart List</string>
+    <string name="input_your_exact_location">Input shipping address</string>
+    <string name="order_now_">Order Now!</string>
+    <string name="large_text">Large Text</string>
+    <string name="if_appartment">Ap</string>
+    
+    <string name="search_btn_menu">Buscar</string>
+    <string name="logs_btn_menu">Ordenes anteriores</string>
+    <string name="invite_button">Invitar amigos</string>
+    <string name="buycredit_button">Comprar saldo</string>
+    <string name="publish_button">Publicar menu (Soy un restaurant)</string>
+    <string name="exit_button">Salir</string>
+    <string name="new_order">Usted tiene un nuevo pedido!</string>
+    <string name="confirm_order_btn">Confirmar</string>
+    <string name="reject_order_btn">Rechazar</string>
+    <string name="propose_other_product_btn">Proponer alternativa</string>
+    <string name="announcement_label">Anuncio Corporativo</string>
+    <string name="announcement_button">Wow Que Bien!</string>
+    <string name="restaurant_login_button">Soy un restaurante</string>
+</resources>

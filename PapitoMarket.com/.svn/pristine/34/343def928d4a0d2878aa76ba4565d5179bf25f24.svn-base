@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/productrow"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:id="@+id/prodicon"
+        android:layout_width="30px"
+        android:layout_height="30px"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="0px"
+        android:layout_marginTop="0px"
+        
+        android:src="@drawable/view" >
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/soldname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"        
+        android:textSize="20px" >
+
+    </TextView>
+    
+    <TextView
+        android:id="@+id/soldprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@+id/label"
+        android:textSize="20px" >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/soldamount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"        
+        android:textSize="20px" >
+
+    </TextView>
+
+    <Button
+        android:id="@+id/fblogoutbtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="Yes" />
+
+    <Button
+        android:id="@+id/button2"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="No" />
+
+</TableRow>

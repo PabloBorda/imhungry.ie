@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File created by the Android Action Bar Style Generator
+
+     Copyright (C) 2011 The Android Open Source Project
+     Copyright (C) 2012 readyState Software Ltd
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+    <style name="Theme.Imhungry" parent="@style/Theme.AppCompat.Light">
+        <item name="actionBarItemBackground">@drawable/selectable_background_imhungry</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Imhungry</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Imhungry</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Imhungry</item>
+        <item name="actionDropDownStyle">@style/DropDownNav.Imhungry</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Imhungry</item>
+        <item name="actionModeBackground">@drawable/cab_background_top_imhungry</item>
+        <item name="actionModeSplitBackground">@drawable/cab_background_bottom_imhungry</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Imhungry</item>
+
+        
+    </style>
+
+    <style name="ActionBar.Solid.Imhungry" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="background">@drawable/ab_solid_imhungry</item>
+        <item name="backgroundStacked">@drawable/ab_stacked_solid_imhungry</item>
+        <item name="backgroundSplit">@drawable/ab_bottom_solid_imhungry</item>
+        <item name="progressBarStyle">@style/ProgressBar.Imhungry</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Imhungry" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="background">@drawable/ab_transparent_imhungry</item>
+        <item name="progressBarStyle">@style/ProgressBar.Imhungry</item>
+    </style>
+	
+    <style name="PopupMenu.Imhungry" parent="@style/Widget.AppCompat.Light.PopupMenu">	
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_imhungry</item>	
+    </style>
+	
+    <style name="DropDownListView.Imhungry" parent="@style/Widget.AppCompat.Light.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_imhungry</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Imhungry" parent="@style/Widget.AppCompat.Light.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_imhungry</item>
+    </style>
+	
+    <style name="DropDownNav.Imhungry" parent="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar">
+        <item name="android:background">@drawable/spinner_background_ab_imhungry</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_imhungry</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_imhungry</item>
+    </style>
+    
+    <style name="ProgressBar.Imhungry" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_imhungry</item>
+    </style>
+    
+    <style name="ActionButton.CloseMode.Imhungry" parent="@style/Widget.AppCompat.Light.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_imhungry</item>
+    </style>
+    
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Imhungry.Widget" parent="@style/Theme.AppCompat">
+        <item name="popupMenuStyle">@style/PopupMenu.Imhungry</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Imhungry</item>
+    </style>
+
+</resources>

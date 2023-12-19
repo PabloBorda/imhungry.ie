@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/selectaddr"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@color/black" >
+    
+<Spinner
+        android:id="@+id/select_addr_spin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+<Button
+    android:id="@+id/okloadaddr"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/select_addr_spin"
+    android:layout_centerInParent="true"
+    android:gravity="center_horizontal"
+    android:text="Ok" />
+
+</RelativeLayout>

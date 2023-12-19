@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">iMhungry</string>
+    <string name="imh_button_start">imh_button</string>
+    <string name="imh_image_button">Start Image Button</string>
+    <string name="title_activity_news">NewsActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

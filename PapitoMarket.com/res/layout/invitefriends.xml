@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/announcement_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Invite friends to use SmartBandS and earn 10 orders!"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ListView
+        android:id="@+id/selection_list"
+        android:layout_width="fill_parent"
+        android:layout_height="354dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_border" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.39"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/selectallbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select All" />
+
+        <Button
+            android:id="@+id/invertselectionbtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Invert Selection" />
+
+        <Button
+            android:id="@+id/continuebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continue" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget32"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_x="0dp"
+    android:layout_y="0dp"
+    android:background="@color/celestelucio"
+    android:orientation="vertical" >
+
+    <RelativeLayout android:id="@+id/storeheader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/repeating_tejas" >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="0px"
+            android:layout_marginRight="0px"
+            android:layout_marginTop="0px"
+            android:contentDescription="@string/logo_image_content_description" />
+
+        <TextView
+            android:id="@+id/companyname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="@string/companyname"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/cartBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="0dp"
+            android:contentDescription="@string/cart_button"
+            android:scaleType="fitXY"
+            android:src="@drawable/cart" 
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="0px"
+        android:layout_below="@+id/storeheader"
+        android:contentDescription="@string/mapimage_content_description" />
+
+    <TextView
+        android:id="@+id/companydesciption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CompanyDescription" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/map"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@android:id/android:list"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/repeating_mantel"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10.0sp"
+            android:drawSelectorOnTop="false" >
+
+        </ListView>
+
+        <Button
+            android:id="@+id/addtocartbtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_to_cart_button_text" />
+    </LinearLayout>
+
+</RelativeLayout>

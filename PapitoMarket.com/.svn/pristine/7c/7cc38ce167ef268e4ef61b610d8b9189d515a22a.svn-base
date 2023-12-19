@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:layout_gravity="center_horizontal"
+              android:orientation="horizontal"
+              android:background="@color/beige">
+
+    <TextView
+        android:id="@+id/order_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/new_order"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView android:id="@+id/fbpic"
+               android:src="@drawable/action_eating"
+               android:layout_width="60dp"
+               android:layout_height="60dp"
+               android:layout_below="@+id/order_title" />
+
+    <TextView
+        android:id="@+id/fbuname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_below="@id/order_title"
+        android:layout_toRightOf="@+id/fbpic"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/addr_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fbuname"
+        android:textColor="@color/black"        
+        android:layout_below="@+id/fbuname"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+      <TextView
+        android:id="@+id/ap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/fbpic"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/black"
+        android:layout_below="@+id/addr_text"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    
+      <ListView
+        android:id="@+id/item_list"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/fbpic"                
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"        
+        android:dividerHeight="5dp" >
+    </ListView>
+    
+    
+    
+    
+    
+    <Button
+        android:id="@+id/propose_alternative_btn"        
+        android:layout_below="@+id/item_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/propose_other_product_btn" />
+
+    <Button
+        android:id="@+id/reject_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/propose_alternative_btn"
+        android:layout_below="@+id/item_list"
+        android:text="@string/reject_order_btn" />
+
+    <Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:layout_toRightOf="@+id/reject_btn"
+        android:layout_below="@+id/item_list"        
+        android:text="@string/confirm_order_btn" />
+
+</RelativeLayout>

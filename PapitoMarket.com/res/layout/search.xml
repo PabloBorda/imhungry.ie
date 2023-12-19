@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rellay"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@color/celestelucio"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/searchheader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/repeating_tejas"
+        android:layout_alignParentTop="true" >
+        
+        <LinearLayout 
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <ProgressBar
+                android:id="@+id/progresscircle"
+                android:layout_width="50px"
+                android:layout_height="50px" />
+
+            <ImageView
+                android:id="@+id/store_logo_prevorders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/online" />
+
+            <TextView
+                android:id="@+id/announcement_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You are online!"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/cartBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/cart" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/searchbox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchheader"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/searchboxfondolucio"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <com.papitomarket.widgets.TagAutoCompleteTextView
+            android:id="@+id/search_text_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/locationbtn"
+            android:background="@drawable/rounded_edittext"
+            android:hint="ie: Av Corrientes 3722, Buenos Aires"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+            <requestFocus />
+        
+      <ImageButton
+          android:id="@+id/locationbtn"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:layout_centerVertical="false"
+          android:layout_marginBottom="10dp"
+          android:layout_marginRight="5dp"
+          android:layout_marginTop="10dp"
+          android:scaleType="fitCenter"
+          android:src="@drawable/location" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/resultlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/searchbox"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@android:id/android:list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/repeating_mantel"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="20dp"
+            android:drawSelectorOnTop="false"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:scrollingCache="true" >
+
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

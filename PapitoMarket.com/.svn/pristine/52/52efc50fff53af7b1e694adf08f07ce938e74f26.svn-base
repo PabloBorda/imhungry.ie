@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/celestelucio"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/announcement_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:text="@string/your_shopping_cart_list"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:ignore="HardcodedText" />
+
+    <RelativeLayout
+        android:id="@+id/shippingdata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/announcement_label"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/toldo12" >
+
+        <Button
+            android:id="@+id/savelocationbtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@android:id/android:list"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/addredit"
+            android:layout_marginLeft="10dp"
+            android:text="Save" 
+            />
+
+        <Button
+            android:id="@+id/loadaddrbtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/addredit"
+            android:layout_toRightOf="@id/savelocationbtn"
+            android:text="Load" />
+
+        <Button
+            android:id="@+id/clearshippingbtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/addredit"
+            android:layout_toRightOf="@id/loadaddrbtn"
+            android:text="Clear" />
+        
+        <com.papitomarket.widgets.TagAutoCompleteTextView
+        android:id="@+id/addredit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+
+        android:hint="@string/input_your_exact_location" >
+
+
+    </com.papitomarket.widgets.TagAutoCompleteTextView>
+
+        <EditText
+            android:id="@+id/appartment"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/addredit"
+            android:layout_marginRight="10dp"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+
+
+    
+    </RelativeLayout>
+
+
+
+    <ListView
+        android:id="@android:id/android:list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/orderbtn"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/shippingdata"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:drawSelectorOnTop="false"
+        android:orientation="vertical"
+        android:background="@color/amarillofondolucio" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@android:id/android:list"
+        android:text="@string/large_text"
+        android:hint="@string/if_appartment"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/orderbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/order_now_" />
+
+</RelativeLayout>

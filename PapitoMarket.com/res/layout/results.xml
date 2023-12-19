@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+	android:id="@+id/widget0"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView
+	android:id="@+id/widget41"
+	android:layout_width="298dp"
+	android:layout_height="368dp"
+	android:layout_x="12dp"
+	android:layout_y="55dp">
+<TableRow
+	android:id="@+id/widget42"
+	android:layout_width="fill_parent"
+	android:layout_height="58dp"
+	android:orientation="horizontal">
+<RelativeLayout
+	android:id="@+id/widget43"
+	android:layout_width="286dp"
+	android:layout_height="56dp">
+<ImageView
+	android:id="@+id/widget44"
+	android:layout_width="55dp"
+	android:layout_height="55dp"
+	android:layout_alignParentBottom="true"
+	android:layout_toRightOf="@+id/widget47" />
+<ImageView
+	android:id="@+id/widget47"
+	android:layout_width="17dp"
+	android:layout_height="19dp"
+	android:layout_alignTop="@+id/widget45"
+	android:layout_alignParentLeft="true" />
+<TextView
+	android:id="@+id/widget45"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="TextView"
+	android:layout_centerVertical="true"
+	android:layout_centerHorizontal="true" />
+<TextView
+	android:id="@+id/widget46"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="TextView"
+	android:layout_centerVertical="true"
+	android:layout_alignParentRight="true" />
+</RelativeLayout>
+</TableRow>
+</ScrollView>
+</AbsoluteLayout>

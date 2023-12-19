@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/widget32"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:layout_x="0dp"
+	android:layout_y="0dp">
+<RelativeLayout android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:layout_marginBottom="0px">
+<ImageView
+        android:id="@+id/logo"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_marginLeft="0px"
+        android:layout_marginRight="0px"
+        android:layout_marginTop="0px"/>
+
+<TextView
+    android:id="@+id/companyname"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_marginTop="10px"
+    android:text="CompanyName"
+    android:textSize="20dp" />
+
+<ImageButton
+    android:id="@+id/cartBtn"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_alignParentRight="true"
+    android:layout_gravity="right"
+    android:layout_marginRight="0dp"
+    android:scaleType="fitXY"
+    android:src="@drawable/cart" />
+
+</RelativeLayout>
+<ImageView
+	android:id="@+id/map"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+        android:layout_marginTop="0px" />
+
+ <ListView
+     android:id="@android:id/android:list"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:layout_alignParentLeft="true"
+     android:layout_below="@+id/map"
+     android:layout_marginBottom="50dp"
+     android:layout_marginLeft="10dp"
+     android:layout_marginRight="10dp"
+     android:layout_weight="1"
+     android:background="@color/black"
+     android:divider="@android:color/transparent"
+     android:dividerHeight="10.0sp"
+     android:drawSelectorOnTop="false" />
+
+ <Button
+     android:id="@+id/wholeProductBtn"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:text="Add to cart" />
+ 
+</LinearLayout>

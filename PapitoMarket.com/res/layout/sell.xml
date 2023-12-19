@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/rellaySell"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="#000000">
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="684dp"
+    android:orientation="vertical" >
+  
+   <!-- <ListView android:layout_width="fill_parent"   
+      android:layout_height="fill_parent"   
+      android:id="@+id/mainListView">
+
+     </ListView> -->
+    <TextView
+	android:id="@+id/widget36"
+	android:text="Product Title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>    
+    <EditText
+	android:id="@+id/title_edit"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:hint="hint: Red hat with green flowers"
+	android:textSize="18sp"
+                android:background="@drawable/rounded_edittext"/>
+    <TextView
+        android:id="@+id/widget36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+	android:text="Product Category"/>    
+    <EditText
+	android:id="@+id/category_edit"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:hint="hint: Furniture"
+	android:textSize="18sp"
+                android:background="@drawable/rounded_edittext"/>
+    <TextView
+	android:id="@+id/widget36"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Price"/>    
+    <EditText
+	android:id="@+id/price_edit"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:hint="hint: 5,99"
+	android:textSize="18sp"
+                android:background="@drawable/rounded_edittext"/>
+    <TextView
+	android:id="@+id/widget36"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Product Search Tags"/>    
+    <EditText
+	android:id="@+id/tags_edit"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:hint="hint: flowers gift romantic"
+	android:textSize="18sp"
+                android:background="@drawable/rounded_edittext"/>
+    <TextView
+	android:id="@+id/widget36"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Description"/>    
+          
+    <EditText
+	android:id="@+id/description_edit"
+	android:layout_width="fill_parent"
+	android:layout_height="94dp"
+	android:hint="Description here"
+	android:textSize="18sp"
+                android:background="@drawable/rounded_edittext"/>
+    
+    <TableRow
+        android:id="@+id/widget44"
+        android:layout_width="fill_parent"
+        android:layout_height="98dp"
+        android:orientation="horizontal" >
+
+      <CheckBox
+	  android:id="@+id/deliver_checkbox"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+  	  android:text="Do you deliver?"
+	  android:layout_x="73dp"
+	  android:layout_y="61dp" />
+    
+      <TextView
+	  android:id="@+id/widget44"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:text="Ratio"/>
+
+      <EditText
+          android:id="@+id/ratio_edit"
+          android:layout_width="fill_parent"
+          android:layout_height="94dp"
+          android:background="@drawable/rounded_edittext"
+          android:hint="5"
+          android:textSize="18sp" />
+
+    </TableRow>
+    
+    <TextView
+	android:id="@+id/widget44"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Add picture"/>    
+    
+    <TableRow
+	android:id="@+id/widget44"
+	android:layout_width="fill_parent"
+	android:layout_height="51dp"
+	android:orientation="horizontal">
+    
+    <Button
+	android:id="@+id/camera_button"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Camera" />
+                    
+    <Button
+	android:id="@+id/gal_button"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Gallery" />
+    
+   </TableRow>
+   
+   <ImageView
+	android:id="@+id/current_picture"
+	android:layout_width="30dp"
+	android:layout_height="30dp"/>
+   
+   <WebView android:id="@+id/captcha"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"/>
+   
+   <ImageButton
+     android:id="@+id/publish_button"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_gravity="center_horizontal"
+     android:src="@drawable/publish" />
+   
+</LinearLayout>  
+</ScrollView>

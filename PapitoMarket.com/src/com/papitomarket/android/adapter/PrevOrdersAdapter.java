@@ -1,0 +1,152 @@
+package com.papitomarket.android.adapter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.RemoteException;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.papitomarket.android.NewsActivity;
+import com.papitomarket.android.R;
+import com.papitomarket.android.ShoppingCartActivity;
+import com.papitomarket.global.GlobalData;
+import com.papitomarket.model.cart.Order;
+import com.papitomarket.model.cart.PreviousOrderDataSource;
+import com.papitomarket.model.cart.PreviousOrders;
+import com.papitomarket.util.Util;
+
+public class PrevOrdersAdapter extends BaseAdapter {
+
+	private List<PreviousOrders> previousOrders;
+	private Context ctx;
+	
+	public PrevOrdersAdapter(List<PreviousOrders> previousOrders,Context c){
+		this.previousOrders = previousOrders;
+		this.ctx = c;
+	}
+	
+	
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return previousOrders.size();
+	}
+
+	@Override
+	public Object getItem(int arg0) {
+		// TODO Auto-generated method stub
+		return previousOrders.get(arg0);
+	}
+
+	@Override
+	public long getItemId(int arg0) {
+		// TODO Auto-generated method stub
+		return ((PreviousOrders)getItem(arg0)).getOrder_id();
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		// TODO Auto-generated method stub
+		GlobalData.current_repeat_order_clicked_button = position;
+		LayoutInflater inflater = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		View rowView = inflater.inflate(R.layout.list_previous_orders, parent, false);
+		TextView storeLabel = (TextView) rowView.findViewById(R.id.announcement_label);
+        String toParse = (((PreviousOrders)getItem(position)).getJson());
+        
+        JsonElement order_parsed_json = new JsonParser().parse(toParse);
+        JsonObject order_as_jsob_object = order_parsed_json.getAsJsonObject();
+        String storeName = order_as_jsob_object.get("body").getAsJsonObject().get("store").getAsString();
+        
+        storeLabel.setText(storeName);
+        Button repeat_order_btn = (Button)rowView.findViewById(R.id.repeat_order_btn);
+        repeat_order_btn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+				String toParse = (((PreviousOrders)getItem(GlobalData.current_repeat_order_clicked_button)).getJson());
+				JsonElement order_parsed_json = new JsonParser().parse(toParse);
+				JsonObject order_as_jsob_object = order_parsed_json.getAsJsonObject();
+				String targetStore = order_as_jsob_object.get("body").getAsJsonObject().get("store_jabber_addr").getAsString();
+				
+				 try {
+						while (NewsActivity.service == null) {};
+						
+						boolean sent = ShoppingCartActivity.service.sendNotification(targetStore,toParse);
+						String orderres = Util.postData("http://192.241.140.67:9494/order", toParse);
+						
+						if ( sent && orderres.contains("OK") ){  
+						
+						
+						  AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ShoppingCartActivity.instance);
+						  alertDialogBuilder.setTitle("Thank you!").setMessage("Your order is being confirmed, wait to receive confirmation").setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+							
+							@Override
+							public void onClick(DialogInterface arg0, int arg1) {
+								// TODO Auto-generated method stub
+								arg0.cancel();
+								
+								
+							}
+						  });
+						  AlertDialog alertDialog = alertDialogBuilder.create();
+						  alertDialog.show();
+						  GlobalData.orders = new ArrayList<Order>();												 
+						  
+						} else {
+							
+							 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ShoppingCartActivity.instance);
+							  alertDialogBuilder.setTitle("Order Failed!").setMessage("Su pedido no fue enviado correctamente, intentelo mas tarde.").setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+								
+								@Override
+								public void onClick(DialogInterface arg0, int arg1) {
+									// TODO Auto-generated method stub
+									arg0.cancel();
+									//resetVariables();
+									//Intent gotoMain = new Intent(getApplicationContext(),NewsActivity.class);
+									//startActivity(gotoMain);
+								}
+							  });
+							  AlertDialog alertDialog = alertDialogBuilder.create();
+							  alertDialog.show();
+							  GlobalData.orders = new ArrayList<Order>();
+							
+							
+							
+							
+							
+							
+							
+							
+						}
+					    } catch (RemoteException e) {
+						  // TODO Auto-generated catch block
+						  e.printStackTrace();
+					    }
+					  
+		
+				
+				
+				
+				
+			}
+		});
+        return rowView;
+                
+	}
+
+}
